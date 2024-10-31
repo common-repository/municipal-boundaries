@@ -1,0 +1,105 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.mmap-wrap {
+    clear: both;
+    width: 100%!important;
+    max-width: 100%!important;
+    float: left;
+}
+.mmap-wrap .legend-container,
+.mmap-wrap .map-container {
+    height: 600px;
+    overflow: hidden;
+    float: left;
+    /* border: 1px solid #2b3481; */
+}
+.mmap-wrap .map-container {
+    width: 80%;
+}
+.mmap-wrap .legend-container {
+    width: 20%;
+}
+.mmap-wrap .legend-container > .item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mmap-wrap .legend-container > .item > a {
+    width: 100%;
+    display: block;
+    max-width: 95%;
+    margin: 0 auto;
+    border-radius: 20px;
+    /* background-color: rgba(43, 52, 129, 0.3); */
+    background-color: rgb(43, 52, 129);
+    color: #fff;
+    box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+}
+
+.mmap-wrap .legend-container > .item > a:active {
+    border-bottom-width: 0px;
+    border-top-width: 1px !important;
+    /* border-top-style: solid; */
+}
+
+/* .mmap-wrap .legend-container > .item > .d-lefkosia { border: 2px solid #a4c29a; }
+.mmap-wrap .legend-container > .item > .d-ammochostos { border: 2px solid #a09996; }
+.mmap-wrap .legend-container > .item > .d-keryneia { border: 2px solid #eda2a0; }
+.mmap-wrap .legend-container > .item > .d-paphos { border: 2px solid #ebe79e; }
+.mmap-wrap .legend-container > .item > .d-lemesos { border: 2px solid #c6ae9e; }
+.mmap-wrap .legend-container > .item > .d-larnaka { border: 2px solid #a49de4; } */
+
+.mmap-wrap .legend-container > .item.active > .d-lefkosia { font-weight: bold; background-color: #a4c29a; }
+.mmap-wrap .legend-container > .item.active > .d-ammochostos { font-weight: bold; background-color: #a09996; }
+.mmap-wrap .legend-container > .item.active > .d-keryneia { font-weight: bold; background-color: #eda2a0; }
+.mmap-wrap .legend-container > .item.active > .d-paphos { font-weight: bold; background-color: #ebe79e; }
+.mmap-wrap .legend-container > .item.active > .d-lemesos { font-weight: bold; background-color: #c6ae9e; }
+.mmap-wrap .legend-container > .item.active > .d-larnaka { font-weight: bold; background-color: #a49de4; }
+
+.mmap-wrap .legend-container > .item:hover > a {
+    background-color: #2b3481;
+}
+.mmap-wrap .legend-container .item > a {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-decoration: none;
+    /* color: #333; */
+    font-size: 17px;
+}
+.mmap-wrap .legend-container > .item:hover > a {
+    color: #fff;
+    background-color: rgba(43, 52, 129, 0.6); 
+}
+
+@media(max-width: 1199px){
+    .mmap-wrap .map-container { width: 70%; }
+    .mmap-wrap .legend-container { width: 30%; }
+}
+
+@media(max-width: 715px){
+    .mmap-wrap .map-container,
+    .mmap-wrap .legend-container {
+        width: 100%;
+    }
+    .mmap-wrap .legend-container {
+        height: initial;
+        text-align: center;;
+    }
+    .mmap-wrap .legend-container > .item,
+    .mmap-wrap .legend-container > .item > a {
+        display: inline-block;
+        width: initial;
+    }
+    .mmap-wrap .legend-container > .item > a {
+        padding: 2px 2px;
+        line-height: 20px;
+    }
+}
